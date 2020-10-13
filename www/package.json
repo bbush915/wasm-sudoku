@@ -1,0 +1,25 @@
+{
+  "name": "wasm-sudoku",
+  "version": "0.1.0",
+  "description": "A bare-bones Sudoku application leveraging WebAssembly.",
+  "author": "Bryan Bush <bryan@dialexa.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "wasm-sudoku": "file:../pkg"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "1.0.1",
+    "css-loader": "4.3.0",
+    "html-webpack-plugin": "4.5.0",
+    "style-loader": "2.0.0",
+    "ts-loader": "8.0.4",
+    "typescript": "4.0.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  }
+}

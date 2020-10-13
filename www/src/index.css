@@ -1,0 +1,125 @@
+html,
+body {
+  font-family: Flamenco, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 375px;
+}
+
+.instructions {
+  margin-top: 16px;
+  max-width: 315px;
+  text-align: center;
+}
+
+#notification {
+  border-radius: 5px;
+  display: none;
+  font-size: 20px;
+  margin-top: 12px;
+  padding: 10px;
+  text-align: center;
+  width: 325px;
+}
+
+#notification.visible {
+  display: block;
+}
+
+#notification.error {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+#notification.success {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(9, 38px);
+  grid-template-rows: repeat(9, 38px);
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.cell {
+  border: 1px dotted black;
+  color: blue;
+  font-size: 26px;
+  height: 38px;
+  line-height: 38px;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  width: 38px;
+}
+
+.cell.clue {
+  color: black;
+}
+
+.cell:nth-child(3n) {
+  border-right: 2px solid black;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: 2px solid black;
+}
+
+.cell:nth-child(n):nth-child(-n + 9),
+.cell:nth-child(n + 28):nth-child(-n + 36),
+.cell:nth-child(n + 55):nth-child(-n + 63) {
+  border-top: 2px solid black;
+}
+
+.cell:nth-child(n + 19):nth-child(-n + 27),
+.cell:nth-child(n + 46):nth-child(-n + 54),
+.cell:nth-child(n + 73):nth-child(-n + 81) {
+  border-bottom: 2px solid black;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 5px;
+  width: 300px;
+}
+
+button {
+  background-color: white;
+  border: 2px solid black;
+  flex: 1;
+  font-family: inherit;
+  font-size: 16px;
+  height: 38px;
+  outline-color: black;
+  outline-width: 1px;
+}
+
+button:hover {
+  background-color: lightgrey;
+}
+
+button:active {
+  background-color: darkgrey;
+}
