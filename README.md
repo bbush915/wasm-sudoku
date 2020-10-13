@@ -1,2 +1,2 @@
-# wasm-sudoku
-A bare-bones Sudoku application leveraging WebAssembly.
+# WebAssembly Sudoku
+A bare-bones Sudoku application leveraging the Rust -> WebAssembly toolchain.
